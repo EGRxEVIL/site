@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Все туры:</h1>
+    {% for el in info %}
+    <p>{{info[el]["country"]}}: <a href="/data/tours/{el}/">{{info[el]["title"]}} {{info[el]["price"]}} {{info[el]["stars"]}}* </a></p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TUrbo test</title>
+</head>
+<body>
+
+{% for link in links %}
+   <nav>
+      {% if request.path == link %}{% set c = "active" %}
+			{% else %} {% set c="" %} {% endif %}
+      <a href="{{ link }}" class="{{ c }}">{{ link }}</a></nav>
+{% endfor %}
+</body>
+</html>
